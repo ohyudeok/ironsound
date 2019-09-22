@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>아이언맨</title>
+</head>
+
+
+<style>
+	#myimg{height:700px; margin-top:40px; position:absolute; z-index:200; margin-left:250px; }
+	#mybody{background:black; overflow:hidden; height:1080px; width:1920px; margin:0px;}
+	#shoong{z-index:99; position:absolute; top:1080px;}
+		@keyframes up{
+			to{top:0px;}
+		}
+	#shoong2{z-index:99; position:absolute; top:-200px; left:100px;}
+		@keyframes down2{
+			to{top:1080px;}
+		}
+	#c{width:30px; height:10px; z-index:98; position:absolute; top:1080px; background:green; left:50px;}
+		@keyframes up2{
+			to{transform:scale(1,500);}
+		}
+	#c2{width:30px; height:10px; z-index:98; position:absolute; top:0px; background:blue; left:150px;}
+		@keyframes down{
+			to{transform:scale(1,500);}
+		}	
+	#cur{left:45%; position:absolute; z-index:199; top:-50px; width:850px}
+		@keyframes mov{
+			to{left:100%;}
+		}
+	#cur2{right:50%; position:absolute; z-index:199; top:-50px; width:800px}
+		@keyframes mov2{
+			to{right:100%;}
+		}
+	#earth{width:900px; left:30%; position:absolute; z-index:30; top:200px}
+		@keyframes ro{
+			to{transform:rotate(-360deg);}
+		}
+	#city{width:1400px; position:absolute; z-index:50; opacity:0; left:200px; top:-100px}
+		@keyframes ro2{
+			to{transform:rotate(15deg);}
+		}
+	#cloud{width:500px; position:absolute; z-index:60; left:200px; top:0px;}
+		@keyframes up3{
+			to{top:-50px;}
+		}
+	#cloud2{width:500px; position:absolute; z-index:60; left:800px; top:-100px}
+	#flower{display: block; width:1000px; margin-left:300px; opacity:0}
+	#fire{position:absolute; z-index:20; width:500px; margin-left:1000px; top: 0px;}
+	#cock{position:absolute; z-index:300; top:350px; width:100px; left:350px; animation: po 0.4s alternate infinite; opacity:1;}
+		@keyframes po{
+			to{left:380px;}
+		}
+	#alien{position:absolute; z-index:103; top:150px; width:250px; left:200px;}
+		@keyframes ro3{
+			to{transform:rotate3d(1,0.5,0.5,360deg);
+			}
+		}
+	#logo{position:absolute; z-index:199; top:100px; right:50px; width:600px;}
+	#mini{position:absolute; z-index:199; top:500px; opacity:0; left:20px; width:250px;}
+	#mini2{position:absolute; z-index:199; top:500px; opacity:0; left:1200px; width:250px;}
+	#micro{position:absolute; z-index:201; top:350px; left:600px; width:180px; opacity:1;}
+
+</style>
+
+
+<body id="mybody">
+	<img src="dark.png" id="myimg">
+	<img src="shoong.gif" id="shoong">
+	<img src="shoong2.gif" id="shoong2">
+	<div id="c"></div>
+	<div id="c2"></div>
+	<img src="curtain.png" id="cur">
+	<img src="curtain.png" id="cur2">
+	<img src="earth.png" id="earth">
+	<img src="city.png" id="city">
+	<img src="cloud.png" id="cloud">
+	<img src="cleancloud.png" id="cloud2">
+	<img src="flower.gif" id="flower">
+	<img src="fire.gif" id="fire">
+	<img src="cock.png" id="cock">
+	<img src="alien.png" id="alien">
+	<img src="logo.png" id="logo">
+	<audio id="mysound" loop>
+  		<source src="Time.mp3" type="audio/mp3"></audio>
+  	<img src="mini.gif" id="mini">
+  	<img src="mini.gif" id="mini2">
+  	<img src="micro.png" id="micro">
+
+	
+
+<script type="text/javascript">
+		myimg.onclick = function(){
+			myimg.src = "signat.gif";
+			c.style.animation = "up2 3s linear infinite";
+			c2.style.animation = "down 3s linear infinite";
+			shoong.style.animation = "up 3s linear infinite";
+			shoong2.style.animation = "down2 3s linear infinite";
+			cur.style.animation = "mov 2s alternate infinite";
+			cur2.style.animation = "mov2 2s alternate infinite";
+			earth.style.animation = "ro 5s linear infinite";
+			city.style.opacity = 1;
+			city.style.animation = "ro2 1s alternate infinite";
+			cloud.style.animation = "up3 1s alternate infinite";
+			cloud2.style.animation = "up3 1s alternate infinite";
+			flower.style.opacity = 1;
+			cock.style.opacity = 0;
+			alien.style.animation = "ro3 10s alternate infinite";
+			mysound.play();
+			mini.style.opacity = 1;
+			mini2.style.opacity = 1;
+			micro.style.opacity = 0;
+		}
+
+</script>
+
+</body>
+</html>
